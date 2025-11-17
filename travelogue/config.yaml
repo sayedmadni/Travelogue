@@ -1,13 +1,50 @@
-#-------------------------------------------------------------------------------------------
-#  Copyright (c) 2016-2025.  SupportVectors AI Lab
-#
-#  This code is part of the training material, and therefore part of the intellectual property.
-#  It may not be reused or shared without the explicit, written permission of SupportVectors.
-#
-#  Use is limited to the duration and purpose of the training at SupportVectors.
-#
-#  Author: SupportVectors AI Training
-#-------------------------------------------------------------------------------------------
+# Travelogue Project Configuration
 
-cohort: Spring 2025
+cohort: Fall 2025
+project: travelogue
+description: A travelogue project to track my travels
 
+embeddings:
+  multimodal:
+    model: "ViT-B-16-SigLIP2"
+    size: 768
+    distance: "cosine"
+  text:
+    model: "all-MiniLM-L6-v2"
+    size: 384
+    distance: "cosine"
+  
+# Vector DB particulars
+vector_db:
+  type: "qdrant"
+  path: "qdrant_db"
+  text_only_basic:
+    collection_name: "text_only_basic"
+    vector_size: 384
+  multimodal_basic:
+    collection_name: "multimodal_basic"
+    vector_size: 768
+
+paths:
+  training_data: # this could the location of where we store our training pictures and also where we store our family pictures
+  family_data: # this could the location of where we store our family pictures
+
+clip:
+  model: "openai/clip-vit-base-patch32"
+  collection_name: "tree_embeddings"
+
+siglip2:
+  model: "google/siglip2-base-patch16-224"
+  collection_name: "tree_siglip2_embeddings"
+
+deepface:
+  collection_name: "faces_collection"
+  model_name: "ArcFace"
+  detector_backend: "retinaface"
+  threshold: 0.4
+
+vector-db:
+  host: "localhost"
+  container: "qdrant-vlu"
+  volume: "qdrant_volume"
+  port: 6333

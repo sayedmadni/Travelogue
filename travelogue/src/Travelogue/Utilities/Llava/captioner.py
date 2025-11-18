@@ -7,7 +7,7 @@
 #
 #   Author: SupportVectors AI Training Team
 #  -------------------------------------------------------------------------------------------------
-from svlearn_vlu import config
+from Utilities.config_loader import config
 from transformers import LlavaForConditionalGeneration, AutoProcessor, BitsAndBytesConfig
 import torch
 from PIL import Image

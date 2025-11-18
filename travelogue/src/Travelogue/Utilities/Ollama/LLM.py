@@ -3,7 +3,7 @@ def inference_server_model(relevant_chunks, q):
     from ollama import Client
     client = Client()
     prompt = f"""
-    Based on the following college admission document search results, provide a comprehensive answer to the user's query: "{q}"
+    Based on the following search results create a travel album for memories of the trip, provide a comprehensive answer to the user's query: "{q}"
     Search Results:
     {relevant_chunks}
     Please provide:
@@ -11,5 +11,5 @@ def inference_server_model(relevant_chunks, q):
     2. Key insights from the most relevant results
     3. How the search results relate to the user's question
     Answer: """
-    response = client.generate(model='llama3.1', prompt=prompt)
+    response = client.generate(model='gpt-oss:20b', prompt=prompt)
     return response['response']

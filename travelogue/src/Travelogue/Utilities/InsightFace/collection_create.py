@@ -9,7 +9,7 @@
 #  -------------------------------------------------------------------------------------------------
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance
-from svlearn_vlu import config
+from ..config_loader import config
 
 def create_collection(recreate=False):
     """Create a collection in Qdrant if it doesn't exist, or recreate it if it does.

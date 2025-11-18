@@ -14,8 +14,8 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import VectorParams, Distance
 from PIL import Image
 from transformers import CLIPProcessor, CLIPModel
-from svlearn_vlu import config
-from svlearn_vlu.utils.qdrant_setup import start_vector_db, PORT
+from ..config_loader import config
+from ..qdrant_setup import start_vector_db, PORT
 from tqdm import tqdm
 
 

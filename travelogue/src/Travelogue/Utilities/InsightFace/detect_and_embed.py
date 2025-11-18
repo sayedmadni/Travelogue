@@ -13,10 +13,10 @@ from qdrant_client import QdrantClient
 import numpy as np
 import os
 import cv2
-from svlearn_vlu import config
+from ..config_loader import config
 import platform
 import torch
-from svlearn_vlu.face_detection.collection_create import create_collection
+from .collection_create import create_collection
 
 def get_ctx_id() -> int:
     if "darwin" in platform.system().lower():

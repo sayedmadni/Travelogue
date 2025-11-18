@@ -12,7 +12,7 @@ import torch
 from qdrant_client import QdrantClient
 from PIL import Image
 from transformers import CLIPProcessor, CLIPModel
-from svlearn_vlu import config
+from ..config_loader import config
 import matplotlib.pyplot as plt
 
 

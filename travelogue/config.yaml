@@ -26,8 +26,8 @@ vector_db:
     vector_size: 768
 
 paths:
-  training_data: # this could the location of where we store our training pictures and also where we store our family pictures
-  family_data: # this could the location of where we store our family pictures
+  training_data: "/home/anuragd/labshare/travelogue/training_data"
+  family_data: "/home/anuragd/labshare/travelogue/family_photos"
 
 clip:
   model: "openai/clip-vit-base-patch32"
